@@ -1,3 +1,4 @@
+import './GlabelStyles.scss';
 function GlabelStyles({ children }) {
     return children;
 }
