@@ -9,7 +9,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
     faUser,
     faCoins,
     faGear,
@@ -25,6 +24,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { AccountItem } from '~/components/AccountItem';
 import Menu from '~/components/Poper/Menu';
+import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Images';
 
 const cx = classNames.bind(styles);
 
@@ -141,9 +142,19 @@ function Header() {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 300]} content="Update video" placement="bottom">
+                            <Tippy delay={[0, 100]} content="Update video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 100]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 100]} content="Inbox" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -158,10 +169,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/329761687_1203931376872319_2543083625942112730_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NrAIY_VmGkgAX_oRajz&_nc_ht=scontent.fsgn2-7.fna&oh=00_AfDCAPc0BsPAug-006-9Gag_DrwTdERQFIf7gA_r9ScAlg&oe=64EDD209"
+                                src="https://tscontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/329761687_1203931376872319_2543083625942112730_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NrAIY_VmGkgAX_oRajz&_nc_ht=scontent.fsgn2-7.fna&oh=00_AfDCAPc0BsPAug-006-9Gag_DrwTdERQFIf7gA_r9ScAlg&oe=64EDD209"
                                 alt="Mai Van Pho"
+                                // fallBack="https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
