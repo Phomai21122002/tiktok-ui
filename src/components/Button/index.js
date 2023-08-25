@@ -7,6 +7,7 @@ const cx = classNames.bind(styles);
 function Button({
     to,
     href,
+    onClick,
     disable = false,
     text = false,
     primary = false,
@@ -18,7 +19,6 @@ function Button({
     rightIcon = false,
     children,
     className,
-    onClick,
     ...passProps
 }) {
     let Comp = 'button';

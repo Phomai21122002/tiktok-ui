@@ -25,6 +25,21 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    type: 'Language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'Language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -36,6 +51,16 @@ const MENU_ITEMS = [
         title: 'Keyboard shortcuts',
     },
 ];
+
+// handle login
+const handleMenuChange = (menuItem) => {
+    switch (menuItem.type) {
+        case 'Language':
+            // handle change language
+            break;
+        default:
+    }
+};
 
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
@@ -81,11 +106,11 @@ function Header() {
                 </Tippy>
                 <div className={cx('actions')}>
                     <Button text>Upload</Button>
-                    <Button to primary>
+                    <Button button primary>
                         Log in
                     </Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
