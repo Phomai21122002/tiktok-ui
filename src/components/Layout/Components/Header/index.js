@@ -136,7 +136,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://tscontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/329761687_1203931376872319_2543083625942112730_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NrAIY_VmGkgAX_oRajz&_nc_ht=scontent.fsgn2-7.fna&oh=00_AfDCAPc0BsPAug-006-9Gag_DrwTdERQFIf7gA_r9ScAlg&oe=64EDD209"
+                                src="https://scontent.fdad3-5.fna.fbcdn.net/v/t1.15752-9/371783793_1340845700122536_1886382160819249610_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=fg7JEYvyNHgAX8AmCXe&_nc_ht=scontent.fdad3-5.fna&oh=03_AdQIwFGcqF0oSgy-FncjppxQhoFmLzFlUIA2VauWKQCj8Q&oe=651A4945"
                                 alt="Mai Van Pho"
                                 // fallBack="https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg"
                             />
