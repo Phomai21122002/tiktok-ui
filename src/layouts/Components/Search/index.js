@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import * as searchServices from '~/apiServices/searchServices';
-import { useDebounce } from '~/Hooks';
+import * as searchServices from '~/services/searchService';
+import { useDebounce } from '~/hooks';
 import { Wrapper as PoperWrapper } from '~/components/Poper';
 import { AccountItem } from '~/components/AccountItem';
 import styles from './Search.module.scss';
@@ -101,5 +102,9 @@ function Search() {
         </div>
     );
 }
+
+AccountItem.propTypes = {
+    data: PropTypes.object,
+};
 
 export default Search;
