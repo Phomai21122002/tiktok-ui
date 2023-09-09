@@ -3,3 +3,4 @@ export { default as Following } from '~/pages/Following';
 export { default as Update } from '~/pages/Update';
 export { default as Search } from '~/pages/Search';
 export { default as Profile } from '~/pages/Profile';
+export { default as Live } from '~/pages/Live';

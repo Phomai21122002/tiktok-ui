@@ -126,9 +126,7 @@ function Header() {
                     ) : (
                         <>
                             <Button text>Upload</Button>
-                            <Button button primary>
-                                Log in
-                            </Button>
+                            <Button primary>Log in</Button>
                         </>
                     )}
 

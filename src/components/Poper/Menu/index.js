@@ -45,7 +45,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange }) {
                     <PoperWrapper>
                         {history.length > 1 && (
                             <Header
-                                title="Language"
+                                title={current.title}
                                 onBack={() => {
                                     setHistory((prev) => prev.slice(0, prev.length - 1));
                                 }}
