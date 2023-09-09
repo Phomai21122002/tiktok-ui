@@ -18,7 +18,8 @@ function MenuItem({ title, icon, activeIcon, to }) {
 
 MenuItem.propTypes = {
     title: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
+    icon: PropTypes.object.isRequired,
+    activeIcon: PropTypes.object.isRequired,
     to: PropTypes.string.isRequired,
 };
 

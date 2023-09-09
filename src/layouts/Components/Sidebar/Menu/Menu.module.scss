@@ -1,3 +1,7 @@
+.wrapper {
+    padding-bottom: 8px;
+}
+
 .menu-item {
     display: flex;
     align-items: center;
@@ -5,6 +9,7 @@
     font-weight: 700;
     padding: 8px;
     color: var(--text-color);
+    border-radius: 4px;
     transition: backround-color ease-in-out 20ms;
 
     &.active {
